@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>DataParty | Home</title>
+        <style>
+            #first-load {
+                position: fixed;
+                z-index: 999999;
+                top: 79px;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #262431;
+            }
+            @media (max-width: 720px) {
+                #first-load {
+                    top: 0;
+                }
+            }
+        </style>
+    </head>
+    <body id="home-page-body-tag">
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="./index.html">
+                <img src="${ require('../img/img-logo@2x.png') }" alt="Logo"/>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <span class="dropdown">
+                        <a class="nav-item nav-link dropdown-toggle nav-link-home-page active" id="navbarDropdown" href="./index.html" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            首页
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width: 900%">
+                            <div>
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                        <div class="dropdown-header">大数据基础服务</div>
+                                        <a class="dropdown-item" href="./secondary.html#数据集成">数据集成</a>
+                                        <a class="dropdown-item" href="./secondary.html#数据SDK">数据SDK</a>
+                                        <a class="dropdown-item" href="./secondary.html#日志收集">日志收集</a>
+                                        <a class="dropdown-item" href="./secondary.html#离线同步">离线同步</a>
+                                        <a class="dropdown-item" href="./secondary.html#数据工坊">数据工坊</a>
+                                        <a class="dropdown-item" href="./secondary.html#任务调度">任务调度</a>
+                                        <a class="dropdown-item" href="./secondary.html#流计算">流计算</a>
+                                        <a class="dropdown-item" href="./secondary.html#多维分析">多维分析</a>
+                                        <a class="dropdown-item" href="./secondary.html#数据总线分发">数据总线分发</a>
+                                        <a class="dropdown-item" href="./secondary.html#分布式Bitmap">分布式Bitmap</a>
+                                        <a class="dropdown-item" href="./secondary.html#爬虫平台">爬虫平台</a>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <div class="dropdown-header">大数据应用</div>
+                                        <a class="dropdown-item" href="./secondary.html#A/B实验">A/B实验</a>
+                                        <a class="dropdown-item" href="./secondary.html#用户画像">用户画像</a>
+                                        <a class="dropdown-item" href="./secondary.html#推荐引擎">推荐引擎</a>
+                                        <a class="dropdown-item" href="./secondary.html#渠道推广追踪">渠道推广追踪</a>
+                                        <a class="dropdown-item" href="./secondary.html#数据推送">数据推送</a>
+                                        <div class="dropdown-header">大数据治理</div>
+                                        <a class="dropdown-item" href="./secondary.html#统一移动设备标识">统一移动设备标识</a>
+                                        <a class="dropdown-item" href="./secondary.html#异常检测">异常检测</a>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <div class="dropdown-header">大数据可视化</div>
+                                        <a class="dropdown-item" href="./secondary.html#DataFace">DataFace</a>
+                                        <a class="dropdown-item" href="./secondary.html#大数据统计后台">大数据统计后台</a>
+                                        <a class="dropdown-item" href="./secondary.html#数据大屏">数据大屏</a>
+                                        <div class="dropdown-header">基础组件服务</div>
+                                        <a class="dropdown-item" href="./secondary.html#轻量HTTPServer">轻量HTTPServer</a>
+                                        <a class="dropdown-item" href="./secondary.html#压测工具HTTPBench">压测工具HTTPBench</a>
+                                        <a class="dropdown-item" href="./secondary.html#CA认证授权">CA认证授权</a>
+                                        <a class="dropdown-item" href="./secondary.html#通知服务">通知服务</a>
+                                        <a class="dropdown-item" href="./secondary.html#地理位置识别">地理位置识别</a>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <div class="dropdown-header">机器学习</div>
+                                        <a class="dropdown-item" href="./secondary.html#机器学习平台">机器学习平台</a>
+                                        <a class="dropdown-item" href="./secondary.html#特征平台">特征平台</a>
+                                        <a class="dropdown-item" href="./secondary.html#算法应用平台">算法应用平台</a>
+                                        <a class="dropdown-item" href="./secondary.html#深度学习平台">深度学习平台</a>
+                                        <a class="dropdown-item" href="./secondary.html#Online Scorer">Online Scorer</a>
+                                        <a class="dropdown-item" href="./secondary.html#Parameter Server">Parameter Server</a>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <div class="dropdown-header">NLP</div>
+                                        <a class="dropdown-item" href="./secondary.html#中文分词">中文分词</a>
+                                        <a class="dropdown-item" href="./secondary.html#命名实体识别">命名实体识别</a>
+                                        <a class="dropdown-item" href="./secondary.html#情感识别">情感识别</a>
+                                        <a class="dropdown-item" href="./secondary.html#词法分析">词法分析</a>
+                                        <a class="dropdown-item" href="./secondary.html#文本分类">文本分类</a>
+                                        <a class="dropdown-item" href="./secondary.html#敏感词服务">敏感词服务</a>
+                                        <a class="dropdown-item" href="./secondary.html#文本内容安全">文本内容安全</a>
+                                        <a class="dropdown-item" href="./secondary.html#对话系统服务">对话系统服务</a>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <div class="dropdown-header">风控</div>
+                                        <a class="dropdown-item" href="./secondary.html#异常检测系统">异常检测系统</a>
+                                        <a class="dropdown-item" href="./secondary.html#规则引擎">规则引擎</a>
+                                        <a class="dropdown-item" href="./secondary.html#风控数据库">风控数据库</a>
+                                        <div class="dropdown-header">信息检索</div>
+                                        <a class="dropdown-item" href="./secondary.html#搜索引擎">搜索引擎</a>
+                                        <a class="dropdown-item" href="./secondary.html#推荐引擎">推荐引擎</a>
+                                    </div>
+                                </div>
+                            </div>
+                       </div>
+                   </span>
+                    <a class="nav-item nav-link" href="#">解决方案</a>
+                    <a class="nav-item nav-link" href="./techSharing.html">技术分享</a>
+                    <a class="nav-item nav-link" href="./about.html">关于我们</a>
+                </div>
+            </div>
+        </nav>
+
+        <article class="app-home-page" id="fullpage">
+            <div id="first-load"></div>
+            <section class="section">
+                <div class="col-md-6">
+                    <div class="text-container row justify-content-center">
+                        <div>
+                            <h3>大数据</h3>
+                            <p>
+                                 从数据采集、上报，到数据订阅、集成，数据查找、开发、ETL、调度、再到数据质量控制、血缘，以及服务开发、发布，为业务方落地数据价值提供一站式大数据链路。
+                            </p>
+                            <a href="./bigData.html">点击查看更多 ></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="img-container row justify-content-center">
+                        <img src="${require('../img/大数据@2x.png')}" alt="大数据">
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="col-md-6">
+                    <div class="img-container row justify-content-center">
+                        <img src="${require('../img/机器学习@2x.png')}" alt="机器学习">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="text-container row justify-content-center">
+                        <div>
+                            <h3>机器学习</h3>
+                            <p>
+                                利用前沿的深度学习手段和自研的系统平台，打造精准、高效和多样化的个性化推荐体系，为千万用户提供最贴近需求的个性化体验，并且构建内容生产者和用户的连接桥梁，实现优质内容向用户的精准分发，优化内容生态。
+                            </p>
+                            <a href="./machineLearning.html">点击查看更多 ></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="col-md-6">
+                    <div class="text-container row justify-content-center">
+                        <div>
+                            <h3>NLP</h3>
+                            <p>
+                                实现高效、通用与准确的文本基础处理组件，以解决各业务基础文本处理需求。并负责NLG，文本风格迁移，知识图谱等NLP技术落地，通过前沿的NLP技术的有效运用，构建智能的chatbot体系。
+                            </p>
+                            <a href="./nlp.html">点击查看更多 ></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="img-container row justify-content-center">
+                        <img src="${require('../img/自然语言处理@2x.png')}" alt="NLP">
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="col-md-6">
+                    <div class="img-container row justify-content-center">
+                        <img src="${require('../img/风控@2x.png')}" alt="风控">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="text-container row justify-content-center">
+                        <div>
+                            <h3>风控</h3>
+                            <p>
+                                致力于打造集数据预警，规则引擎，异常挖掘，用户处理，数据输出为一体的风控体系。并通过业界先进的机器学习与深度学习相关算法来高效准确地识别用户作弊与垃圾行为，优化用户产品体验，减少公司损失。
+                            </p>
+                            <a href="./riskControl.html">点击查看更多 ></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="col-md-6">
+                    <div class="text-container row justify-content-center">
+                        <div>
+                            <h3>信息检索</h3>
+                            <p>
+                                打造产品化的检索平台，实现各业务数据检索需求的快速接入，并通过前沿的AI技术，来完善与提升各产品的数据检索体验。
+                            </p>
+                            <a href="./search.html">点击查看更多 ></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="img-container row justify-content-center">
+                        <img src="${require('../img/信息检索@2x.png')}" alt="信息检索">
+                    </div>
+                </div>
+            </section>
+
+            <section class="section footer-section fp-auto-height">
+                <div class="content">
+                    <footer>
+                        <div class="row align-items-start">
+                            <section class="left-column col-md-3 row justify-content-start">
+                                <ul>
+                                    <li>
+                                        <span>关于我们</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://dataparty.meitustat.com/data-integration/home">DataParty</li>
+                                    </li>
+                                    <li>
+                                        <a href="./techSharing.html">技术与分析</li>
+                                    </li>
+                                </ul>
+                            </section>
+                            <section class="left-column col-md-3 row justify-content-start">
+                                <ul>
+                                    <li>
+                                        <span>友情链接</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://corp.meitu.com/">美图官网</li>
+                                    </li>
+                                    <li>
+                                        <a href="http://hr.meitu.com/">美图招聘</li>
+                                    </li>
+                                </ul>
+                            </section>
+                            <section class="left-column col-md-3 row justify-content-start">
+                                <ul>
+                                    <li>
+                                        <span>联系我们</span>
+                                    </li>
+                                    <li>
+                                        <a>联系合作：zhuy@meitu.com</a>
+                                    </li>
+                                    <li>
+                                        <a>联系地址：厦门市望海路8号之二</a>
+                                    </li>
+                                </ul>
+                            </section>
+                            <section class="right-column col-md-3 row flex-column align-items-end">
+                                <img src="${ require('../img/img-qcode@2x.png') }" alt="Mtdata 公众号"/>
+                            </section>
+                        </div>
+                        <section class="copyright">
+                            <p class="text-center">Copyright &copy; 2018 大数据与 AI 团队出品</p>
+                        </section>
+                    </footer>
+                </div>
+            </section>
+        </article>
+    </body>
+</html>
