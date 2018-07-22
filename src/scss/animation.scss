@@ -1,0 +1,147 @@
+@keyframes addBlur {
+    from {
+        filter: blur(3vmin) contrast(100);
+    }
+    to {
+        filter: blur(3vmin) contrast(100);
+    }
+}
+
+@keyframes inMom1 {
+    from {
+        background-color: #40b4e0;
+        transform: translate(0, 0);
+    }
+    75% {
+        transform: translate(0, 0);
+    }
+    90% {
+        background-color: #40b4e0;
+        transform: translate(18vmin, 25vmin);
+    }
+    to {
+        transform: translate(18vmin, 25vmin) scale(10);
+    }
+}
+
+@keyframes inMom2 {
+    from {
+        background-color: #40b4e0;
+        transform: translate(0, 0);
+    }
+    67.5% {
+        transform: translate(0, 0);
+    }
+    85% {
+        background-color: #40b4e0;
+        transform: translate(18vmin, -35vmin);
+    }
+    to {
+        transform: translate(18vmin, -35vmin) scale(10);
+    }
+}
+
+@keyframes inMom3 {
+    from {
+        background-color: #40b4e0;
+        transform: translate(0, 0);
+    }
+    60% {
+        transform: translate(0, 0);
+    }
+    85% {
+        background-color: #40b4e0;
+        transform: translate(-21vmin, 23vmin);
+    }
+    to {
+        transform: translate(-21vmin, 23vmin) scale(10);
+    }
+}
+
+@keyframes inMom4 {
+    from {
+        background-color: #40b4e0;
+        transform: translate(0, 0);
+    }
+    57.5% {
+        transform: translate(0, 0);
+    }
+    80% {
+        background-color: #40b4e0;
+        transform: translate(-18vmin, -18vmin);
+    }
+    to {
+        transform: translate(-18vmin, -18vmin) scale(10);
+    }
+}
+
+@keyframes showIn {
+    from {
+        top: 50px;
+        left: 22%;
+        background-color: #40b4e0;
+    }
+    30% {
+        transform: translate(-100%, 0);
+    }
+    32.5% {
+        transform: translate(-100%, 0);
+    }
+    50% {
+        transform: translate(-80%, -100%);
+    }
+    52.5% {
+        transform: translate(-80%, -100%);
+    }
+    65% {
+        transform: translate(-60%, -25%);
+    }
+    67.5% {
+        transform: translate(-55%, -70%);
+    }
+    100% {
+        background-color: #40b4e0;
+    }
+}
+
+@keyframes photoIn {
+    from {
+        transform: translate(-50%, -50%) scale(0);
+    }
+    76% {
+        transform: translate(-50%, -50%) scale(0);
+    }
+    90% {
+        transform: translate(-50%, -50%) scale(1.4);
+    }
+    to {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@keyframes splitLineIn {
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes popIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes shinnig {
+    from {
+        box-shadow: 0px 0px 7px #CA6040;
+    }
+    45% {
+        box-shadow: 0px 0px 28px #CA6040;
+    }
+    60% {
+        box-shadow: 0px 0px 28px #CA6040;
+    }
+    to {
+        box-shadow: 0px 0px 7px #CA6040;
+    }
+}

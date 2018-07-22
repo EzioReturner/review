@@ -1,0 +1,29 @@
+@import "./scss/firstScreen.scss";
+@import "./scss/animation.scss";
+html,
+body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 10px;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#fp-nav {
+    >ul>li>a {
+        >span {
+            background: #fff;
+            opacity: 0.5;
+        }
+        &.active>span {
+            background: #fff;
+            opacity: 1;
+        }
+    }
+}

@@ -6,7 +6,7 @@
     "scripts": {
         "build": "npm run clean && webpack --mode=production",
         "tinify": "node tinify",
-        "dev": "webpack-dev-server --hot --inline",
+        "dev": "webpack-dev-server --hot --inline --mode=production",
         "test": "echo \"Error: no test specified\" && exit 1",
         "clean": "rimraf dist"
     },
