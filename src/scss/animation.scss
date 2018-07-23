@@ -8,70 +8,46 @@
 }
 
 @keyframes inMom1 {
-    from {
-        background-color: #40b4e0;
-        transform: translate(0, 0);
-    }
-    60% {
-        transform: translate(0, 0);
-    }
-    80% {
+    45% {
         background-color: #40b4e0;
         transform: translate(130px, 200px) scale(1.5);
     }
     to {
-        transform: translate(130px, 200px) scale(10);
+        background-color: rgb(38, 36, 49);
+        transform: translate(130px, 200px) scale(12);
     }
 }
 
 @keyframes inMom2 {
-    from {
-        background-color: #40b4e0;
-        transform: translate(0, 0);
-    }
-    52.5% {
-        transform: translate(0, 0);
-    }
-    75% {
+    50% {
         background-color: #40b4e0;
         transform: translate(130px, -290px) scale(1.5);
     }
     to {
-        transform: translate(130px, -290px) scale(10);
+        background-color: rgb(38, 36, 49);
+        transform: translate(130px, -290px) scale(12);
     }
 }
 
 @keyframes inMom3 {
-    from {
-        background-color: #40b4e0;
-        transform: translate(0, 0);
-    }
-    45% {
-        transform: translate(0, 0);
-    }
-    85% {
+    60% {
         background-color: #40b4e0;
         transform: translate(-170px, 185px) scale(1.5);
     }
     to {
-        transform:  translate(-170px, 185px) scale(10);
+        background-color: rgb(38, 36, 49);
+        transform:  translate(-170px, 185px) scale(12);
     }
 }
 
 @keyframes inMom4 {
-    from {
-        background-color: #40b4e0;
-        transform: translate(0, 0);
-    }
-    42.5% {
-        transform: translate(0, 0);
-    }
-    70% {
+    61.35% {
         background-color: #40b4e0;
         transform: translate(-146px, -146px) scale(1.5);
     }
     to {
-        transform: translate(-146px, -146px) scale(10);
+        background-color: rgb(38, 36, 49);
+        transform: translate(-146px, -146px) scale(12);
     }
 }
 
@@ -149,13 +125,7 @@
 }
 
 @keyframes photoIn {
-    from {
-        transform: translate(-50%, -50%) scale(0);
-    }
-    76% {
-        transform: translate(-50%, -50%) scale(0);
-    }
-    90% {
+    60% {
         transform: translate(-50%, -50%) scale(1.4);
     }
     to {
@@ -177,15 +147,19 @@
 
 @keyframes shinnig {
     from {
-        box-shadow: 0px 0px 7px #CA6040;
+        transform: translate(-50%, -50%) scale(1);
+        box-shadow: 0px 0px 17px #CA6040;
     }
     45% {
-        box-shadow: 0px 0px 28px #CA6040;
+        transform: translate(-50%, -50%) scale(1);
+        box-shadow: 0px 0px 48px #CA6040;
     }
     60% {
-        box-shadow: 0px 0px 28px #CA6040;
+        transform: translate(-50%, -50%) scale(1);
+        box-shadow: 0px 0px 48px #CA6040;
     }
     to {
-        box-shadow: 0px 0px 7px #CA6040;
+        transform: translate(-50%, -50%) scale(1);
+        box-shadow: 0px 0px 17px #CA6040;
     }
 }

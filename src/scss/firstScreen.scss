@@ -33,28 +33,25 @@
     .smallBall {
         width: 85px;
         height: 85px;
-        background-color: rgb(38, 36, 49);
+        background-color: #40b4e0;
         position: absolute;
         top: 50%;
         left: 50%;
         margin: -42.5px;
         border-radius: 50%;
         will-change: transform;
+        transform: translate3d(0,0,0);
         &.one {
-            transform: translate3d(130px, 200px, 0) scale(16);
-            animation: inMom1 2.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+            animation: inMom1 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045) 1.15s forwards;
         }
         &.two {
-            transform: translate3d(130px, -290px, 0) scale(16);
-            animation: inMom2 2.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+            animation: inMom2 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045) 1.15s forwards;
         }
         &.three {
-            transform: translate3d(170px, 185px, 0) scale(16);
-            animation: inMom3 2.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+            animation: inMom3 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045) 1.15s forwards;
         }
         &.four {
-            transform: translate3d(146px, -146px, 0) scale(16);
-            animation: inMom4 2.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+            animation: inMom4 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045) 1.15s forwards;
         }
     }
 }
@@ -64,14 +61,14 @@
     height: 100%;
     background-color: #fff;
     overflow: hidden;
-    animation: addBlur 1.7s ease;
+    animation: addBlur 1.85s ease;
 }
 
 .profilePhoto {
     position: absolute;
     left: 50%;
     top: 40%;
-    transform: translate3d(-50%, -50%, 0);
+    transform: translate(-50%, -50%) scale(0);
     width: 165px;
     height: 165px;
     border: 3px solid hotpink;
@@ -79,11 +76,11 @@
     background: url(images/profilePhoto.jpg) no-repeat;
     background-size: 165px 210px;
     background-position-y: -25px;
-    animation: photoIn 2.8s ease;
+    animation: photoIn .5s ease 2.4s forwards;
     will-change: transform;
     box-shadow: 0px 0px 13px #CA6040;
     &.inPosition {
-        animation: shinnig 2s infinite;
+        animation: shinnig 2s infinite forwards;
     }
 }
 
