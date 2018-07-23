@@ -42,16 +42,36 @@
         will-change: transform;
         transform: translate3d(0,0,0);
         &.one {
-            animation: inMom1 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045) 1.15s forwards;
+            @media screen and (max-width: 700px) {
+                animation: inMom1 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045) 1.15s forwards;
+            }
+            @media screen and (min-width: 710px) {
+                animation: inMom1-pc 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045) 1.15s forwards;
+            }
         }
         &.two {
-            animation: inMom2 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045) 1.15s forwards;
+            @media screen and (max-width: 700px) {
+                animation: inMom2 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045) 1.15s forwards;
+            }
+            @media screen and (min-width: 710px) {
+                animation: inMom2-pc 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045) 1.15s forwards;
+            }
         }
         &.three {
-            animation: inMom3 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045) 1.15s forwards;
+            @media screen and (max-width: 700px) {
+                animation: inMom3 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045) 1.15s forwards;
+            }
+            @media screen and (min-width: 710px) {
+                animation: inMom3-pc 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045) 1.15s forwards;
+            }
         }
         &.four {
-            animation: inMom4 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045) 1.15s forwards;
+            @media screen and (max-width: 700px) {
+                animation: inMom4 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045) 1.15s forwards;
+            }
+            @media screen and (min-width: 710px) {
+                animation: inMom4-pc 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045) 1.15s forwards;
+            }
         }
     }
 }
@@ -81,6 +101,28 @@
     box-shadow: 0px 0px 13px #CA6040;
     &.inPosition {
         animation: shinnig 2s infinite forwards;
+    }
+}
+
+#splitPoint {
+    height: 10px;
+    width: 10px;
+    transform-origin: 50% 50%;
+    margin: -5px;
+    background: #CA6040;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 62%;
+    transform: rotate(50deg);
+    opacity: 0;
+
+    &.start {
+        opacity: 1;
+        animation: pointGrowUp 1.5s ease forwards;
+    }
+    &.backOne{
+        animation: pointBackOne 1.3s ease forwards;
     }
 }
 
@@ -117,6 +159,7 @@
             transform: rotate(45deg);
             transform-origin: 50% 50%;
             background: #FFD700;
+            box-shadow: 0px 0px 27px #ffffff;
             margin: 0px 10px;
         }
     }

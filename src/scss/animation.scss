@@ -17,7 +17,16 @@
         transform: translate(130px, 200px) scale(12);
     }
 }
-
+@keyframes inMom1-pc{
+    45% {
+        background-color: #40b4e0;
+        transform: translate(330px, 200px) scale(1.5);
+    }
+    to {
+        background-color: rgb(38, 36, 49);
+        transform: translate(330px, 200px) scale(14);
+    }
+}
 @keyframes inMom2 {
     50% {
         background-color: #40b4e0;
@@ -26,6 +35,16 @@
     to {
         background-color: rgb(38, 36, 49);
         transform: translate(130px, -290px) scale(12);
+    }
+}
+@keyframes inMom2-pc{
+    50% {
+        background-color: #40b4e0;
+        transform: translate(330px, -290px) scale(1.5);
+    }
+    to {
+        background-color: rgb(38, 36, 49);
+        transform: translate(330px, -290px) scale(14);
     }
 }
 
@@ -39,6 +58,16 @@
         transform:  translate(-170px, 185px) scale(12);
     }
 }
+@keyframes inMom3-pc{
+    60% {
+        background-color: #40b4e0;
+        transform: translate(-370px, 185px) scale(1.5);
+    }
+    to {
+        background-color: rgb(38, 36, 49);
+        transform:  translate(-370px, 185px) scale(14);
+    }
+}
 
 @keyframes inMom4 {
     61.35% {
@@ -48,6 +77,16 @@
     to {
         background-color: rgb(38, 36, 49);
         transform: translate(-146px, -146px) scale(12);
+    }
+}
+@keyframes inMom4-pc{
+    61.35% {
+        background-color: #40b4e0;
+        transform: translate(-346px, -146px) scale(1.5);
+    }
+    to {
+        background-color: rgb(38, 36, 49);
+        transform: translate(-346px, -146px) scale(14);
     }
 }
 
@@ -161,5 +200,29 @@
     to {
         transform: translate(-50%, -50%) scale(1);
         box-shadow: 0px 0px 17px #CA6040;
+    }
+}
+
+@keyframes pointGrowUp{
+    30% {
+        transform: scaleY(110);
+    }
+    to {
+        box-shadow: 0px 0px 0px;
+        transform: scale(210,110);
+        background-color: rgb(38, 36, 49);
+    }
+}
+
+@keyframes pointBackOne{
+    from {
+        opacity: 1;
+        transform: scale(210,110);
+        background-color: rgb(38, 36, 49);
+    }
+    30% {
+        opacity: 0.7;
+        transform: scaleY(110);
+        background-color: #CA6040;
     }
 }
