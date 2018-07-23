@@ -9,9 +9,11 @@
 </head>
 
 <body>
-    <span id="splitPoint"></span>
+    <div class="lineContainer">
+        <span id="splitPoint"></span>
+    </div>
     <article class="content" id="fullpage">
-        <section class="section">
+        <section class="section sectionOne">
             <div class="ball-container">
                 <div id="myBall">
                     <div class="smallBall one"></div>
@@ -35,35 +37,38 @@
         </section>
 
         <section class="section">
-
+            <div class="centerContainer">
+                <div class="thirdCenter" id="thirdCenter"></div>
+            </div>
         </section>
     </article>
 
 </body>
 <script>
-(function(win,doc){
-      var UA = navigator.userAgent,
-          isAndroid = /android|adr/gi.test(UA),
-          isIos = /iphone|ipod|ipad/gi.test(UA) && !isAndroid;
-      var docEl = doc.documentElement;
-      var refreshRem =function (){
-          var w =docEl.getBoundingClientRect().width || 320;
-          var fs = w/320 * 20;
-          fs = fs>40 ? 40 : fs;
-          docEl.style.fontSize = fs+'px';
-      },refreshRemId;
-      win.addEventListener('resize', function() {
-          clearTimeout(refreshRemId);
-          refreshRemId = setTimeout(refreshRem, 100);
-      }, false);
-      win.addEventListener('pageshow', function(e) {
-          if (e.persisted) {
-              clearTimeout(refreshRemId);
-              refreshRemId = setTimeout(refreshRem, 100);
-          }
-      }, false);
-      refreshRem();
- })(window,document);
+    (function(win, doc) {
+        var UA = navigator.userAgent,
+            isAndroid = /android|adr/gi.test(UA),
+            isIos = /iphone|ipod|ipad/gi.test(UA) && !isAndroid;
+        var docEl = doc.documentElement;
+        var refreshRem = function() {
+                var w = docEl.getBoundingClientRect().width || 320;
+                var fs = w / 320 * 20;
+                fs = fs > 40 ? 40 : fs;
+                docEl.style.fontSize = fs + 'px';
+            },
+            refreshRemId;
+        win.addEventListener('resize', function() {
+            clearTimeout(refreshRemId);
+            refreshRemId = setTimeout(refreshRem, 100);
+        }, false);
+        win.addEventListener('pageshow', function(e) {
+            if (e.persisted) {
+                clearTimeout(refreshRemId);
+                refreshRemId = setTimeout(refreshRem, 100);
+            }
+        }, false);
+        refreshRem();
+    })(window, document);
 </script>
 
 </html>

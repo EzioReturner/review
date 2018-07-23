@@ -9,14 +9,24 @@ $(document).ready(function() {
         sectionsColor: ['#262431', '#262431', '#262431', '#262431', '#262431', '#2c2d39'],
         lazyLoading: true,
         afterLoad: function(anchor, index) {
-
+            // if (index === 3) {
+            //     $('#thirdCenter').addClass('showPyramid')
+            // }
         },
-        onLeave: function(index,nextIndex) {
+        onLeave: function(index, nextIndex) {
             if (index === 1 && nextIndex === 2) {
-                $('#splitPoint').removeClass('backOne').addClass('start');
+                $('#splitPoint').removeClass('backOne goThird').addClass('start');
             }
             if (index === 2 && nextIndex === 1) {
-                $('#splitPoint').removeClass('start').addClass('backOne');
+                $('#splitPoint').removeClass('start goThird').addClass('backOne');
+            }
+            if (nextIndex === 3) {
+                $('#thirdCenter').addClass('showPyramid');
+            } else {
+                $('#thirdCenter').removeClass('showPyramid');
+            }
+            if (index === 2 && nextIndex === 3) {
+                $('#splitPoint').removeClass('start backOne').addClass('goThird');
             }
         }
     });
