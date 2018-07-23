@@ -3,9 +3,26 @@
     width: 100%;
 }
 
-#myBall {
-    width: 15vmin;
+#ballX{
     height: 15vmin;
+    width: 15vmin;
+    position: absolute;
+    left: 50px;
+    top: 400px;
+    animation: moveX 1s ease-out forwards;
+}
+
+#ballY{
+    height: 100%;
+    width: 100%;
+    background: #f60;
+    border-radius: 50%;
+    animation: moveYfree 1s ease-in forwards;
+}
+
+#myBall {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     position: absolute;
     left: 50%;
@@ -14,38 +31,35 @@
     will-change: transform;
     animation: showIn 1.2s ease-out;
     .smallBall {
-        width: 10vmin;
-        height: 10vmin;
+        width: 85px;
+        height: 85px;
         background-color: rgb(38, 36, 49);
         position: absolute;
         top: 50%;
         left: 50%;
-        margin: -5vmin;
+        margin: -42.5px;
         border-radius: 50%;
         will-change: transform;
         &.one {
-            transform: translate3d(18vmin, 25vmin, 0) scale(15);
-            animation: inMom1 2s ease-in;
+            transform: translate3d(130px, 200px, 0) scale(16);
+            animation: inMom1 2.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
         }
         &.two {
-            transform: translate3d(18vmin, -35vmin, 0) scale(15);
-            animation: inMom2 2s ease-in;
+            transform: translate3d(130px, -290px, 0) scale(16);
+            animation: inMom2 2.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
         }
         &.three {
-            transform: translate3d(-21vmin, 23vmin, 0) scale(15);
-            animation: inMom3 2s ease-in;
+            transform: translate3d(170px, 185px, 0) scale(16);
+            animation: inMom3 2.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
         }
         &.four {
-            transform: translate3d(-18vmin, -18vmin, 0) scale(15);
-            animation: inMom4 2s ease-in;
+            transform: translate3d(146px, -146px, 0) scale(16);
+            animation: inMom4 2.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
         }
     }
 }
 
 .ball-container {
-    // position: absolute;
-    // left: 0;
-    // top: 0;
     width: 100%;
     height: 100%;
     background-color: #fff;
@@ -58,12 +72,12 @@
     left: 50%;
     top: 40%;
     transform: translate3d(-50%, -50%, 0);
-    width: 20vmin;
-    height: 20vmin;
+    width: 165px;
+    height: 165px;
     border: 3px solid hotpink;
     border-radius: 50%;
     background: url(images/profilePhoto.jpg) no-repeat;
-    background-size: 20vmin 27vmin;
+    background-size: 165px 210px;
     background-position-y: -25px;
     animation: photoIn 2.8s ease;
     will-change: transform;
@@ -93,16 +107,16 @@
         animation: splitLineIn 1s ease-in 2s;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
-        margin-bottom: 1.5rem;
+        margin-bottom: 15px;
         &>span:first-child,
         &>span:nth-child(3) {
-            width: 15vmin;
+            width: 130px;
             height: 2px;
             background: #FFD700;
         }
         &>span:nth-child(2) {
-            height: 1vmin;
-            width: 1vmin;
+            height: 10px;
+            width: 10px;
             transform: rotate(45deg);
             transform-origin: 50% 50%;
             background: #FFD700;
@@ -116,7 +130,7 @@
     font-size: 27px;
     font-weight: 700;
     color: white;
-    margin-bottom: 1.5rem;
+    margin-bottom: 15px;
     opacity: 0;
     animation: popIn 0.4s ease-in 2.7s;
     animation-iteration-count: 1;

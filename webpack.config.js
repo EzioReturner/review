@@ -41,19 +41,28 @@ module.exports = {
                 }, ],
             },
             {
-                test: /\.css$/,
-                use: ExtractTextPlugin.extract({
-                    fallback: "style-loader",
-                    use: "css-loader"
-                })
+                test: /\.(scss|css)$/,
+                use: [
+                    {loader: 'style-loader'},
+                    {loader: 'css-loader?sourceMap'},
+                    {loader: 'postcss-loader'},
+                    {loader: 'sass-loader?sourceMap'},
+                ]
             },
-            {
-                test: /\.scss$/,
-                use: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: ['css-loader', 'sass-loader']
-                })
-            },
+            // {
+            //     test: /\.css$/,
+            //     use: ExtractTextPlugin.extract({
+            //         fallback: "style-loader",
+            //         use: 'css-loader'
+            //     })
+            // },
+            // {
+            //     test: /\.scss$/,
+            //     use: ExtractTextPlugin.extract({
+            //         fallback: 'style-loader',
+            //         use: ['css-loader', 'sass-loader']
+            //     })
+            // },
             {
                 test: /\.(png|jpg|gif)$/,
                 use: [{
@@ -71,6 +80,15 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/view/index.html',
             filename: 'index.html',
+            minify: {
+                collapseWhitespace: true,
+            },
+            hash: true,
+            inject: true
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/view/home.html',
+            filename: 'home.html',
             minify: {
                 collapseWhitespace: true,
             },
