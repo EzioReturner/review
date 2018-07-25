@@ -33,4 +33,17 @@ $(document).ready(function() {
     $('#profilePhoto').bind('webkitAnimationEnd', function() {
         $(this).addClass('inPosition').unbind('webkitAnimationEnd');
     });
+    let bgMusic = document.getElementById('bgMusic');
+    $('#oneBall').bind('webkitAnimationEnd', function() {
+        $('#musicBox').css('opacity', 1).toggleClass('play');
+        bgMusic.play();
+    });
+    $('#musicBox').click(function() {
+        if (bgMusic.paused) {
+            bgMusic.play();
+        } else {
+            bgMusic.pause();
+        }
+        $(this).toggleClass('play')
+    });
 });

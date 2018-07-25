@@ -12,11 +12,16 @@
     <div class="lineContainer">
         <span id="splitPoint"></span>
     </div>
+    <audio id="bgMusic" src="http://m10.music.126.net/20180726002858/f55f1c601ed63cd1a7d9c222c2c72d57/ymusic/8ca9/7c3e/04ad/e3c5e92c8167d3f27df3552580b0d308.mp3" preload loop="loop"></audio>
+    <div id="musicBox">
+        <div class="pause"></div>
+        <div class="bg"></div>
+    </div>
     <article class="content" id="fullpage">
         <section class="section sectionOne">
             <div class="ball-container">
                 <div id="myBall">
-                    <div class="smallBall one"></div>
+                    <div class="smallBall one" id="oneBall"></div>
                     <div class="smallBall two"></div>
                     <div class="smallBall three"></div>
                     <div class="smallBall four"></div>
@@ -24,12 +29,14 @@
             </div>
             <div class="profilePhoto" id="profilePhoto"></div>
             <div id="profileInfo">
-                <!-- <span class="profileName">用最优雅的方式描绘每一个像素</span> -->
+                <span class="profileName" style="opacity: 0;">用最优雅的方式描绘每一个像素</span>
                 <span class="splitLine">
                     <span></span><span></span><span></span>
                 </span>
-                <!-- <span class="profileName">我叫王哲威</span>
-                <span class="profileName">一名前端开发工程师</span> -->
+                <span class="profileName" style="opacity: 0;">我叫王哲威</span>
+                <span class="profileName" style="opacity: 0;">一名前端开发工程师</span>
+            </div>
+            <div style="opacity: 0;position: absolute;top: 0;font-size: 30px;color: black;">hahahahahahhahahahahahahah hashdaushduaishdajsdkansmdbas ajklshdahskdjh
             </div>
         </section>
         <section class="section">

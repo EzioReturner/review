@@ -114,13 +114,11 @@
             justify-content: space-around;
             align-items: center;
             transform: scaleX(0);
-            animation: splitLineIn 1s ease-in 2s;
-            animation-iteration-count: 1;
-            animation-fill-mode: forwards;
+            animation: splitLineIn 1s ease-in 2.4s forwards;
             margin-bottom: 15px;
             &>span:first-child,
             &>span:nth-child(3) {
-                width: 130px;
+                width: 230px;
                 height: 2px;
                 background: #FFD700;
             }
@@ -134,17 +132,23 @@
                 margin: 0px 10px;
             }
         }
-    }
-    .profileName {
-        text-shadow: 2px 2px #CA6040;
-        font-size: 27px;
-        font-weight: 700;
-        color: white;
-        margin-bottom: 15px;
-        opacity: 0;
-        animation: popIn 0.4s ease-in 2.7s;
-        animation-iteration-count: 1;
-        animation-fill-mode: forwards;
+        &>.profileName {
+            text-shadow: 2px 2px #CA6040;
+            font-size: 24px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 15px;
+            opacity: 0;
+            &:nth-child(1) {
+                animation: popIn 0.4s ease-in 2.2s forwards;
+            }
+            &:nth-child(3) {
+                animation: popIn 0.4s ease-in 3.3s forwards;
+            }
+            &:nth-child(4) {
+                animation: popIn 0.4s ease-in 3.8s forwards;
+            }
+        }
     }
 }
 
@@ -183,7 +187,7 @@
     position: absolute;
     z-index: 1;
     left: 50%;
-    top: 62%;
+    top: 60%;
     transform: rotate(50deg);
     opacity: 0;
     &.start {
@@ -229,5 +233,63 @@
     &.showPyramid {
         transition: opacity .5s ease .5s;
         opacity: 1;
+    }
+}
+
+#musicBox {
+    position: fixed;
+    opacity: 0;
+    z-index: 1;
+    top: 30px;
+    right: 35px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    &:hover {
+        &>.pause {
+            opacity: 1;
+        }
+    }
+    &>.bg {
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        background: url(images/music.jpg) no-repeat;
+        background-size: 100% 100%;
+        animation: rotateIfte 10s linear infinite;
+    }
+    &>.pause {
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba($color: #dddddd, $alpha: 0.6);
+        border-radius: 50%;
+    }
+    &.play>.pause::after {
+        content: "";
+        height: 24px;
+        width: 8px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 13px 17px;
+        border-left: 4px solid gray;
+        border-right: 4px solid gray;
+        transition: all .5s;
+    }
+    &:not(.play)>.pause::after {
+        content: "";
+        height: 0px;
+        width: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 12px 21px;
+        border: 13px solid transparent;
+        border-left: 13px solid gray;
+        transition: all .5s;
     }
 }
