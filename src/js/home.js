@@ -34,13 +34,14 @@ $(document).ready(function() {
         $(this).addClass('inPosition').unbind('webkitAnimationEnd');
     });
     let bgMusic = document.createElement('audio');
-    bgMusic.setAttribute('preload',true);
-    bgMusic.setAttribute('loop','loop');
+    bgMusic.setAttribute('preload', true);
+    bgMusic.setAttribute('loop', 'loop');
+    document.body.appendChild(bgMusic);
     console.log(bgMusic);
     // let bgMusic = document.getElementById('bgMusic');
     $('#oneBall').bind('webkitAnimationEnd', function() {
         $('#musicBox').css('opacity', 1).toggleClass('play');
-        bgMusic.src='http://music.163.com/song/media/outer/url?id=472137696.mp3'
+        bgMusic.src = 'http://music.163.com/song/media/outer/url?id=472137696.mp3'
         bgMusic.play();
     });
     $('#musicBox').click(function() {
