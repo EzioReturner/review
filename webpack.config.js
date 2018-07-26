@@ -86,14 +86,5 @@ module.exports = {
             hash: true,
             inject: true
         }),
-        new HtmlWebpackPlugin({
-            template: './src/view/home.html',
-            filename: 'home.html',
-            minify: {
-                collapseWhitespace: true,
-            },
-            hash: true,
-            inject: true
-        }),
     ]
 };
