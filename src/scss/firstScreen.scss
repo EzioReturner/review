@@ -72,6 +72,7 @@
         }
     }
     .ball-container {
+        z-index: 10;
         width: 100%;
         height: 100%;
         background-color: #fff;
@@ -79,6 +80,7 @@
         animation: addBlur 1.85s ease;
     }
     .profilePhoto {
+        z-index: 10;
         position: absolute;
         left: 50%;
         top: 40%;
@@ -98,6 +100,7 @@
         }
     }
     #profileInfo {
+        z-index: 10;
         position: absolute;
         left: 50%;
         top: 63%;
@@ -237,9 +240,9 @@
 }
 
 #musicBox {
+    z-index: 10;
     position: fixed;
     opacity: 0;
-    z-index: 1;
     top: 30px;
     right: 35px;
     width: 50px;
@@ -263,6 +266,8 @@
         width: 100%;
         z-index: 1;
         position: absolute;
+        transition: opacity .5s ease;
+        opacity: 0;
         top: 0;
         left: 0;
         background: rgba($color: #dddddd, $alpha: 0.6);
@@ -292,4 +297,17 @@
         border-left: 13px solid gray;
         transition: all .5s;
     }
+}
+
+#bgCanvas {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.pp {
+    color: rgb(146, 51, 97)
 }
