@@ -97,8 +97,8 @@ const frame = () => {
         ctx.fill();
     });
 
-    const x = mouse.x;
-    const y = mouse.y;
+    // const x = mouse.x;
+    // const y = mouse.y;
     // const grad = ctx.createRadialGradient(x, y, 100, x, y, 2000);
     // grad.addColorStop(0, 'rgba(255,255,255,0.7)');
     // grad.addColorStop(0.06, 'rgba(255,255,255,1)');

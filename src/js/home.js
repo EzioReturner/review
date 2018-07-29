@@ -38,11 +38,13 @@ $(document).ready(function() {
     bgMusic.setAttribute('loop', 'loop');
     bgMusic.setAttribute('autoplay', 'autoplay');
     document.body.appendChild(bgMusic);
-    // let bgMusic = document.getElementById('bgMusic');
-    $('#oneBall').bind('webkitAnimationEnd', function() {
-        $('#musicBox').css('opacity', 1).toggleClass('play');
-        bgMusic.src = 'http://music.163.com/song/media/outer/url?id=472137696.mp3'
-    });
+    // $('#oneBall').bind('webkitAnimationEnd', function() {
+    //     $('#musicBox').css('opacity', 1).toggleClass('play');
+    //     bgMusic.src = 'http://music.163.com/song/media/outer/url?id=472137696.mp3';
+    //     setTimeout(() => {
+    //         $('#bgCanvas').css('opacity', 1);
+    //     }, 300);
+    // });
     $('#musicBox').click(function() {
         if (bgMusic.paused) {
             bgMusic.play();

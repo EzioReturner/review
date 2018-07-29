@@ -348,6 +348,15 @@
     }
 }
 
+@keyframes bounceIn {
+    60% {
+        transform: translateY(-200px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
 @keyframes pointGoThird {}
 
 @keyframes rotateIfte {
