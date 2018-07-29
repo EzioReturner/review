@@ -37,7 +37,6 @@ $(document).ready(function() {
     bgMusic.setAttribute('preload', true);
     bgMusic.setAttribute('loop', 'loop');
     document.body.appendChild(bgMusic);
-    console.log(bgMusic);
     // let bgMusic = document.getElementById('bgMusic');
     $('#oneBall').bind('webkitAnimationEnd', function() {
         $('#musicBox').css('opacity', 1).toggleClass('play');
