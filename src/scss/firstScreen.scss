@@ -103,6 +103,7 @@
         z-index: 10;
         position: absolute;
         left: 50%;
+        // top: 470px;
         top: 63%;
         transform: translate(-50%, -50%);
         width: 100%;
@@ -111,6 +112,12 @@
         justify-content: center;
         flex-flow: column;
         align-items: center;
+        @media screen and (max-height:760px) and (min-width:500px) {
+            top: 66%;
+        }
+        @media screen and (max-width: 490px) {
+            top: 59%;
+        }
         &>.splitLine {
             display: flex;
             flex-flow: row nowrap;
