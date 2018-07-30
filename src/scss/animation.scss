@@ -349,19 +349,60 @@
 }
 
 @keyframes rotateAngle {
-    50% {
-        transform: rotate(60deg) scale(0.5);
-        border-top-color: #b9b9bc;
-        transform-origin: 50% 108px;
+    12.7% {
+        transform: rotate(60deg);
+    }
+    17.7% {
+        transform: rotate(60deg);
+    }
+    29.3% {
+        transform: rotate(120deg);
+    }
+    34.3% {
+        transform: rotate(120deg);
+    }
+    46% {
+        transform: rotate(180deg);
     }
     51% {
-        transform-origin: 50% 224px;
+        transform: rotate(180deg);
     }
-    99% {
-        
+    62.7% {
+        transform: rotate(240deg);
+    }
+    67.7% {
+        transform: rotate(240deg);
+    }
+    79.3% {
+        transform: rotate(300deg);
+    }
+    84.3% {
+        transform: rotate(300deg);
+    }
+    95% {
+        transform: rotate(360deg);
     }
     to {
-        transform: rotate(120deg) scale(1);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes scaleAngle {
+    30% {
+        border-top-color: #cbcad6;
+        transform: scale(0.5);
+    }
+    50% {
+        border-top-color: #cbcad6;
+        transform: scale(0.5);
+    }
+    80% {
+        border-top-color: #272633;
+        transform: scale(1);
+    }
+    to {
+        border-top-color: #272633;
+        transform: scale(1);
     }
 }
 
