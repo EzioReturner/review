@@ -348,12 +348,20 @@
     }
 }
 
-@keyframes bounceIn {
-    60% {
-        transform: translateY(-200px);
+@keyframes rotateAngle {
+    50% {
+        transform: rotate(60deg) scale(0.5);
+        border-top-color: #b9b9bc;
+        transform-origin: 50% 108px;
+    }
+    51% {
+        transform-origin: 50% 224px;
+    }
+    99% {
+        
     }
     to {
-        transform: translateY(0px);
+        transform: rotate(120deg) scale(1);
     }
 }
 
