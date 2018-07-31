@@ -378,9 +378,10 @@
     }
     83.3% {
         transform: rotate(300deg);
-    } // 95% {
-    //     transform: rotate(360deg);
-    // }
+    } 
+    96% {
+        transform: rotate(360deg);
+    }
     to {
         transform: rotate(360deg);
     }
@@ -395,7 +396,7 @@
         border-top-color: #cbcad6;
         transform: scale(0.5);
     }
-    80% {
+    85.8% {
         border-top-color: #272633;
         transform: scale(1);
     }
