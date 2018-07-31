@@ -334,7 +334,7 @@
         height: 100px;
         width: 100px;
         position: relative;
-        animation: rotateAngle 9s cubic-bezier(.05, .6, 0, 1.22) infinite;
+        animation: rotateAngle 6s cubic-bezier(.44, .36, .45, 1.21) infinite;
         transform-origin: 50% 68px;
         #angle {
             position: absolute;
@@ -345,7 +345,7 @@
             border-top: 208px solid #272633;
             box-sizing: border-box;
             transform-origin: 50% 68px;
-            animation: scaleAngle 3s ease infinite;
+            animation: scaleAngle 2.124s ease infinite;
             &>span {
                 width: 237px;
                 position: absolute;

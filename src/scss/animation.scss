@@ -352,43 +352,42 @@
     12.7% {
         transform: rotate(60deg);
     }
-    17.7% {
+    16.7% {
         transform: rotate(60deg);
     }
     29.3% {
         transform: rotate(120deg);
     }
-    34.3% {
+    33.3% {
         transform: rotate(120deg);
     }
     46% {
         transform: rotate(180deg);
     }
-    51% {
+    50% {
         transform: rotate(180deg);
     }
     62.7% {
         transform: rotate(240deg);
     }
-    67.7% {
+    66.7% {
         transform: rotate(240deg);
     }
     79.3% {
         transform: rotate(300deg);
     }
-    84.3% {
+    83.3% {
         transform: rotate(300deg);
-    }
-    95% {
-        transform: rotate(360deg);
-    }
+    } // 95% {
+    //     transform: rotate(360deg);
+    // }
     to {
         transform: rotate(360deg);
     }
 }
 
 @keyframes scaleAngle {
-    30% {
+    35.8% {
         border-top-color: #cbcad6;
         transform: scale(0.5);
     }
