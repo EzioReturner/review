@@ -378,7 +378,7 @@
     }
     83.3% {
         transform: rotate(300deg);
-    } 
+    }
     96% {
         transform: rotate(360deg);
     }
@@ -389,11 +389,11 @@
 
 @keyframes scaleAngle {
     35.8% {
-        border-top-color: #cbcad6;
+        border-top-color: rgb(185, 185, 188);
         transform: scale(0.5);
     }
     50% {
-        border-top-color: #cbcad6;
+        border-top-color: rgb(185, 185, 188);
         transform: scale(0.5);
     }
     85.8% {
@@ -403,6 +403,21 @@
     to {
         border-top-color: #272633;
         transform: scale(1);
+    }
+}
+
+@keyframes changeColor {
+    35.8% {
+        border-bottom-color: rgb(107, 106, 114);
+    }
+    50% {
+        border-bottom-color: rgb(107, 106, 114);
+    }
+    65.8% {
+        border-bottom-color: #272633;
+    }
+    to {
+        border-bottom-color: #272633;
     }
 }
 

@@ -369,6 +369,38 @@
                     top: -105px;
                 }
             }
+            .insideAngle {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin: -268px -60px;
+                border: 60px solid transparent;
+                border-bottom: 104px solid #272633;
+                animation: changeColor 2s ease infinite;
+                &>span {
+                    width: 117px;
+                    position: absolute;
+                    height: 0;
+                    display: inline-block;
+                    border: 1px solid #272633;
+                    box-shadow: 0 0 5px #272633;
+                    transform-origin: 50% 50%;
+                    &:nth-child(1) {
+                        top: 103px;
+                        left: -60px;
+                    }
+                    &:nth-child(2) {
+                        transform: rotate(60deg);
+                        left: -30px;
+                        top: 52px;
+                    }
+                    &:nth-child(3) {
+                        transform: rotate(-60deg);
+                        left: -90px;
+                        top: 52px;
+                    }
+                }
+            }
         }
     }
 }
