@@ -6,81 +6,6 @@
 .sectionOne {
     background: url(images/background.png);
     background-size: 100% 100%;
-    #myBall {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate3d(-50%, -50%, 0);
-        will-change: transform;
-        animation: showIn 1.2s ease-out;
-        .smallBall {
-            width: 85px;
-            height: 85px;
-            background-color: #40b4e0;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            margin: -42.5px;
-            border-radius: 50%;
-            will-change: transform;
-            transform: translate3d(0, 0, 0);
-            &.one {
-                @media screen and (max-width: 700px) {
-                    animation: inMom1 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045) 1.15s forwards;
-                }
-                @media screen and (min-width: 710px) {
-                    animation: inMom1-pc 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045) 1.15s forwards;
-                }
-                @media screen and (min-width: 1610px) {
-                    animation: inMom1-pc-large 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045) 1.15s forwards;
-                }
-            }
-            &.two {
-                @media screen and (max-width: 700px) {
-                    animation: inMom2 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045) 1.15s forwards;
-                }
-                @media screen and (min-width: 710px) {
-                    animation: inMom2-pc 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045) 1.15s forwards;
-                }
-                @media screen and (min-width: 1610px) {
-                    animation: inMom2-pc-large 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045) 1.15s forwards;
-                }
-            }
-            &.three {
-                @media screen and (max-width: 700px) {
-                    animation: inMom3 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045) 1.15s forwards;
-                }
-                @media screen and (min-width: 710px) {
-                    animation: inMom3-pc 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045) 1.15s forwards;
-                }
-                @media screen and (min-width: 1610px) {
-                    animation: inMom3-pc-large 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045) 1.15s forwards;
-                }
-            }
-            &.four {
-                @media screen and (max-width: 700px) {
-                    animation: inMom4 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045) 1.15s forwards;
-                }
-                @media screen and (min-width: 710px) {
-                    animation: inMom4-pc 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045) 1.15s forwards;
-                }
-                @media screen and (min-width: 1610px) {
-                    animation: inMom4-pc-large 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045) 1.15s forwards;
-                }
-            }
-        }
-    }
-    .ball-container {
-        z-index: 10;
-        width: 100%;
-        height: 100%;
-        background-color: #fff;
-        overflow: hidden;
-        animation: addBlur 1.85s ease;
-    }
     .profilePhoto {
         z-index: 10;
         position: absolute;
@@ -161,23 +86,6 @@
             }
         }
     }
-}
-
-#ballX {
-    height: 15vmin;
-    width: 15vmin;
-    position: absolute;
-    left: 50px;
-    top: 400px;
-    animation: moveX 1s ease-out forwards;
-}
-
-#ballY {
-    height: 100%;
-    width: 100%;
-    background: #f60;
-    border-radius: 50%;
-    animation: moveYfree 1s ease-in forwards;
 }
 
 .lineContainer {
@@ -327,16 +235,28 @@
     width: 100%;
     height: 100%;
     background-color: #cbcad6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    #angleBox {
+    .angleBox {
         height: 100px;
         width: 100px;
-        position: relative;
-        animation: rotateAngle 6s cubic-bezier(.44, .36, .45, 1.21) infinite;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -50px -50px;
+        animation: rotateAngle 6s cubic-bezier(.24, .36, .45, 1.31) infinite;
         transform-origin: 50% 68px;
-        #angle {
+        transform: translate3d(0,0,0);
+        will-change: transform;
+        &.one {
+            z-index: 5;
+        }
+        &.two {
+            z-index: 4;
+            animation: rotateAngle-3 3s cubic-bezier(.24, .36, .45, 1.31) infinite;
+        }
+        &.three {
+            z-index: 3
+        }
+        .angle {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -346,6 +266,15 @@
             box-sizing: border-box;
             transform-origin: 50% 68px;
             animation: scaleAngle 2s ease infinite;
+            &.two {
+                animation: scaleAngle-2 2s ease infinite;
+                &>span {
+                    border: 2px solid #272633;
+                }
+            }
+            &.three {
+                animation: scaleAngle-3 2s ease infinite;
+            }
             &>span {
                 width: 237px;
                 position: absolute;
@@ -369,38 +298,38 @@
                     top: -105px;
                 }
             }
-            .insideAngle {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                margin: -268px -60px;
-                border: 60px solid transparent;
-                border-bottom: 104px solid #272633;
-                animation: changeColor 2s ease infinite;
-                &>span {
-                    width: 117px;
-                    position: absolute;
-                    height: 0;
-                    display: inline-block;
-                    border: 1px solid #272633;
-                    box-shadow: 0 0 5px #272633;
-                    transform-origin: 50% 50%;
-                    &:nth-child(1) {
-                        top: 103px;
-                        left: -60px;
-                    }
-                    &:nth-child(2) {
-                        transform: rotate(60deg);
-                        left: -30px;
-                        top: 52px;
-                    }
-                    &:nth-child(3) {
-                        transform: rotate(-60deg);
-                        left: -90px;
-                        top: 52px;
-                    }
-                }
-            }
+            // .insideAngle {
+            //     position: absolute;
+            //     top: 50%;
+            //     left: 50%;
+            //     margin: -268px -60px;
+            //     border: 60px solid transparent;
+            //     border-bottom: 104px solid #272633;
+            //     animation: changeColor 2s ease infinite;
+            //     &>span {
+            //         width: 117px;
+            //         position: absolute;
+            //         height: 0;
+            //         display: inline-block;
+            //         border: 1px solid #272633;
+            //         box-shadow: 0 0 5px #272633;
+            //         transform-origin: 50% 50%;
+            //         &:nth-child(1) {
+            //             top: 103px;
+            //             left: -60px;
+            //         }
+            //         &:nth-child(2) {
+            //             transform: rotate(60deg);
+            //             left: -30px;
+            //             top: 52px;
+            //         }
+            //         &:nth-child(3) {
+            //             transform: rotate(-60deg);
+            //             left: -90px;
+            //             top: 52px;
+            //         }
+            //     }
+            // }
         }
     }
 }
