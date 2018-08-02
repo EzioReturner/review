@@ -131,13 +131,15 @@
 }
 
 @keyframes scaleAngle {
-    28.1% {
+    24.1% {
         transform: scale(0.125);
+        border-top-color: rgb(55, 54, 63);
     }
     50% {
+        border-top-color: rgb(55, 54, 63);
         transform: scale(0.125);
     }
-    76.1% {
+    82.1% {
         transform: scale(1);
     }
     to {
@@ -146,7 +148,7 @@
 }
 
 @keyframes scaleAngle-2 {
-    32.1% {
+    27.1% {
         transform: scale(0.25);
         border-top-color: #6b6a72;
     }
@@ -155,11 +157,11 @@
         border-top-color: #6b6a72;
     }
     82.1% {
-        transform: scale(1);
+        transform: scale(.8);
         border-top-color: #272633;
     }
     to {
-        transform: scale(1);
+        transform: scale(.8);
         border-top-color: #272633;
     }
 }
@@ -174,27 +176,27 @@
         border-top-color: rgb(185, 185, 188);
     }
     82.1% {
-        transform: scale(1);
+        transform: scale(.9);
         border-top-color: #272633;
     }
     to {
-        transform: scale(1);
+        transform: scale(.9);
         border-top-color: #272633;
     }
 }
 
-@keyframes changeColor {
-    35.8% {
-        border-bottom-color: rgb(107, 106, 114);
+@keyframes transWay {
+    32.8% {
+        opacity: 1;
     }
     50% {
-        border-bottom-color: rgb(107, 106, 114);
+        opacity: 1;
     }
-    65.8% {
-        border-bottom-color: #272633;
+    55.1% {
+        opacity: 0;
     }
     to {
-        border-bottom-color: #272633;
+        opacity: 0;
     }
 }
 

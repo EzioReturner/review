@@ -242,10 +242,10 @@
         top: 50%;
         left: 50%;
         margin: -50px -50px;
-        animation: rotateAngle 6s cubic-bezier(.24, .36, .45, 1.31) infinite;
         transform-origin: 50% 68px;
-        transform: translate3d(0,0,0);
+        transform: translate3d(0, 0, 0);
         will-change: transform;
+        animation: rotateAngle 6s cubic-bezier(.24, .36, .45, 1.31) infinite;
         &.one {
             z-index: 5;
         }
@@ -256,6 +256,10 @@
         &.three {
             z-index: 3
         }
+        &.four {
+            z-index: 6;
+            animation: rotateAngle-3 3s cubic-bezier(.24, .36, .45, 1.31) infinite;
+        }
         .angle {
             position: absolute;
             top: 50%;
@@ -264,7 +268,7 @@
             border: 120px solid transparent;
             border-top: 208px solid #272633;
             box-sizing: border-box;
-            transform-origin: 50% 68px;
+            transform-origin: 50% 65.5px;
             animation: scaleAngle 2s ease infinite;
             &.two {
                 animation: scaleAngle-2 2s ease infinite;
@@ -275,13 +279,18 @@
             &.three {
                 animation: scaleAngle-3 2s ease infinite;
             }
+            &.four {
+                opacity: 0;
+                transform: scale(0.0625);
+                animation: transWay 2s infinite; // border-top: 208px solid rgb(39, 38, 51);
+            }
             &>span {
                 width: 237px;
                 position: absolute;
                 height: 0;
                 display: inline-block;
-                border: 1px solid #272633;
-                box-shadow: 0 0 5px #272633;
+                border: 1px solid rgb(39, 38, 51);
+                box-shadow: 0 0 5px rgb(39, 38, 51);
                 transform-origin: 50% 50%;
                 &:nth-child(1) {
                     top: -208px;
@@ -298,38 +307,6 @@
                     top: -105px;
                 }
             }
-            // .insideAngle {
-            //     position: absolute;
-            //     top: 50%;
-            //     left: 50%;
-            //     margin: -268px -60px;
-            //     border: 60px solid transparent;
-            //     border-bottom: 104px solid #272633;
-            //     animation: changeColor 2s ease infinite;
-            //     &>span {
-            //         width: 117px;
-            //         position: absolute;
-            //         height: 0;
-            //         display: inline-block;
-            //         border: 1px solid #272633;
-            //         box-shadow: 0 0 5px #272633;
-            //         transform-origin: 50% 50%;
-            //         &:nth-child(1) {
-            //             top: 103px;
-            //             left: -60px;
-            //         }
-            //         &:nth-child(2) {
-            //             transform: rotate(60deg);
-            //             left: -30px;
-            //             top: 52px;
-            //         }
-            //         &:nth-child(3) {
-            //             transform: rotate(-60deg);
-            //             left: -90px;
-            //             top: 52px;
-            //         }
-            //     }
-            // }
         }
     }
 }
