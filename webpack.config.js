@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: path.resolve(__dirname, 'src/index.js'),
@@ -49,20 +50,6 @@ module.exports = {
                     {loader: 'sass-loader?sourceMap'},
                 ]
             },
-            // {
-            //     test: /\.css$/,
-            //     use: ExtractTextPlugin.extract({
-            //         fallback: "style-loader",
-            //         use: 'css-loader'
-            //     })
-            // },
-            // {
-            //     test: /\.scss$/,
-            //     use: ExtractTextPlugin.extract({
-            //         fallback: 'style-loader',
-            //         use: ['css-loader', 'sass-loader']
-            //     })
-            // },
             {
                 test: /\.(png|jpg|gif)$/,
                 use: [{
@@ -72,6 +59,15 @@ module.exports = {
                         outputPath: 'img/'
                     }
                 }]
+            },
+            {
+                test: /\.html$/,
+                use: [{
+                    loader: 'html-loader',
+                    options: {
+                        minimize: true
+                    }
+                }],
             }
         ]
     },
@@ -85,6 +81,6 @@ module.exports = {
             },
             hash: true,
             inject: true
-        }),
+        })
     ]
 };
