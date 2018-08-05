@@ -1,6 +1,15 @@
 .content {
     height: 100%;
     width: 100%;
+    z-index: 2;
+}
+
+.section {
+    background-color: transparent !important;
+}
+
+#backImg {
+    position: fixed;
 }
 
 .sectionOne {
@@ -107,6 +116,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 3;
 }
 
 #splitPoint {
@@ -125,7 +135,6 @@
     transform: rotate(50deg);
     opacity: 0;
     &.start {
-        opacity: 1;
         animation: pointGrowUp 1.3s ease forwards;
     }
     &.backOne {

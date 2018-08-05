@@ -43,17 +43,19 @@
 }
 
 @keyframes pointGrowUp {
+    from {
+        opacity: 1;
+    }
     40% {
         transform: scaleY(110);
     }
-    99% {
-        box-shadow: 0px 0px 0px;
-        transform: scale(210, 110);
-        background-color: rgb(38, 36, 49);
+    60% {
+        background-color: rgba(38, 36, 49, 0.8);
     }
-    to {
-        opacity: 0;
-        transform: scale(0);
+    99% {
+        opacity: 1;
+        background-color: rgba(38, 36, 49, 0.1);
+        transform: scale(210, 110);
     }
 }
 

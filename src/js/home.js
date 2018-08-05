@@ -41,6 +41,7 @@ $(document).ready(function() {
 
 let bgMusic='';
 function startMyPage() {
+    $('#fullpage').show();
     initFullPage();
     bgMusic = document.createElement('audio');
     bgMusic.setAttribute('preload', true);
@@ -68,6 +69,10 @@ function bindPageAction() {
             bgMusic.pause();
         }
         $(this).toggleClass('play')
+    });
+    $('#infoKey').bind('webkitAnimationEnd',function() {
+        $(this).unbind('webkitAnimationEnd');
+        $.fn.fullpage.setAllowScrolling(true);
     });
 }
 
@@ -100,4 +105,5 @@ function initFullPage() {
             }
         }
     });
+    $.fn.fullpage.setAllowScrolling(false);
 }
