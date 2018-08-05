@@ -7,7 +7,7 @@ $(document).ready(function() {
 
     loadImg(images[0]);
     bindPageAction();
-
+    const startTime = new Date();
     function loadImg(obj) {
         if(index < images.length) {
             const timer = setInterval(function () {
@@ -18,28 +18,47 @@ $(document).ready(function() {
             }, 80);
         } else {
             console.log('complete');
-            startMyPage();
+            const endTime = new Date();
+            const minutesDiff = endTime.getMinutes() - startTime.getMinutes();
+            if(minutesDiff === 0){
+                const secDiff = endTime.getSeconds() - startTime.getSeconds();
+                if(secDiff < 4){
+                    setTimeout(() => {
+                        startMyPage();
+                    }, 2000);
+                }
+            } else {
+                startMyPage();
+            }
+
         }
     }
     // $('#oneBall').bind('webkitAnimationEnd', function() {
-    //     $('#musicBox').css('opacity', 1).toggleClass('play');
-    //     bgMusic.src = 'http://music.163.com/song/media/outer/url?id=472137696.mp3';
+
     // });
 });
 
 
-
+let bgMusic='';
 function startMyPage() {
     initFullPage();
-    let bgMusic = document.createElement('audio');
+    bgMusic = document.createElement('audio');
     bgMusic.setAttribute('preload', true);
     bgMusic.setAttribute('loop', 'loop');
     bgMusic.setAttribute('autoplay', 'autoplay');
     document.body.appendChild(bgMusic);
+    $('#backImg').css('opacity',1);
+    $('#angleContainer').addClass('complete').bind('webkitAnimationEnd',function(){
+        $('#musicBox').css('opacity', 1).toggleClass('play');
+        bgMusic.src = 'http://music.163.com/song/media/outer/url?id=472137696.mp3';
+        $(this).remove();
+    });
+    $('#photoContainer').addClass('pageLoaded');
+    $('#profileInfo').addClass('pageLoaded')
 }
 
 function bindPageAction() {
-    $('#profilePhoto').bind('webkitAnimationEnd', function() {
+    $('#photoContainer').bind('webkitAnimationEnd', function() {
         $(this).addClass('inPosition').unbind('webkitAnimationEnd');
     });
     $('#musicBox').click(function() {

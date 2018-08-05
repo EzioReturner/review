@@ -26,19 +26,19 @@
 @keyframes shinnig {
     from {
         transform: translate(-50%, -50%) scale(1);
-        box-shadow: 0px 0px 17px #CA6040;
+        box-shadow: 0px 0px 17px #ed3a52;
     }
     45% {
         transform: translate(-50%, -50%) scale(1);
-        box-shadow: 0px 0px 48px #CA6040;
+        box-shadow: 0px 0px 48px #ed3a52;
     }
     60% {
         transform: translate(-50%, -50%) scale(1);
-        box-shadow: 0px 0px 48px #CA6040;
+        box-shadow: 0px 0px 48px #ed3a52;
     }
     to {
         transform: translate(-50%, -50%) scale(1);
-        box-shadow: 0px 0px 17px #CA6040;
+        box-shadow: 0px 0px 17px #ed3a52;
     }
 }
 
@@ -196,6 +196,13 @@
         opacity: 0;
     }
     to {
+        opacity: 0;
+    }
+}
+
+@keyframes loadWorld {
+    to {
+        transform: scale(15);
         opacity: 0;
     }
 }

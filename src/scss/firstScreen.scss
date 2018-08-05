@@ -4,27 +4,32 @@
 }
 
 .sectionOne {
-    // background: url(images/background.png);
-    // background-size: 100% 100%;
-    .profilePhoto {
+    #photoContainer {
         z-index: 10;
         position: absolute;
+        transform: translate(-50%, -50%) scale(0);
         left: 50%;
         top: 40%;
-        transform: translate(-50%, -50%) scale(0);
         width: 165px;
         height: 165px;
-        border: 3px solid hotpink;
+        border: 3px solid #CA6040;
         border-radius: 50%;
-        background: url(images/profilePhoto.jpg) no-repeat;
-        background-size: 165px 210px;
-        background-position-y: -25px;
-        animation: photoIn .5s ease 2.4s forwards;
+        // box-shadow: 0px 0px 13px #ed3a52;
         will-change: transform;
-        box-shadow: 0px 0px 13px #CA6040;
+        overflow: hidden;
+        &.pageLoaded {
+            animation: photoIn .5s ease .5s forwards;
+        }
         &.inPosition {
             animation: shinnig 2s infinite forwards;
         }
+    }
+    .profilePhoto {
+        transition: none;
+        width: 165px;
+        height: 225px;
+        position: absolute;
+        top: -27px;
     }
     #profileInfo {
         z-index: 10;
@@ -44,19 +49,35 @@
         @media screen and (max-width: 490px) {
             top: 59%;
         }
+        &.pageLoaded {
+            &>.splitLine {
+                animation: splitLineIn 1s ease-in .8s forwards;
+            }
+            &>.profileName {
+                &:nth-child(1) {
+                    animation: popIn 0.4s ease-in 1s forwards;
+                }
+                &:nth-child(3) {
+                    animation: popIn 0.4s ease-in 1.3s forwards;
+                }
+                &:nth-child(4) {
+                    animation: popIn 0.4s ease-in 1.8s forwards;
+                }
+            }
+        }
         &>.splitLine {
             display: flex;
             flex-flow: row nowrap;
             justify-content: space-around;
             align-items: center;
             transform: scaleX(0);
-            animation: splitLineIn 1s ease-in 2.4s forwards;
             margin-bottom: 15px;
             &>span:first-child,
             &>span:nth-child(3) {
                 width: 230px;
                 height: 2px;
                 background: #FFD700;
+                box-shadow: 0px 0px 17px #ffffff;
             }
             &>span:nth-child(2) {
                 height: 10px;
@@ -75,15 +96,6 @@
             color: white;
             margin-bottom: 15px;
             opacity: 0;
-            &:nth-child(1) {
-                animation: popIn 0.4s ease-in 2.2s forwards;
-            }
-            &:nth-child(3) {
-                animation: popIn 0.4s ease-in 3.3s forwards;
-            }
-            &:nth-child(4) {
-                animation: popIn 0.4s ease-in 3.8s forwards;
-            }
         }
     }
 }
@@ -107,6 +119,9 @@
     z-index: 1;
     left: 50%;
     top: 60%;
+    @media screen and (max-width: 490px) {
+        top: 56%;
+    }
     transform: rotate(50deg);
     opacity: 0;
     &.start {
@@ -155,10 +170,29 @@
     }
 }
 
+.myImages {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: opacity 1s ease;
+}
+
+.backCover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: rgba($color: #272633, $alpha: 0.75);
+}
+
 #musicBox {
     z-index: 10;
     position: fixed;
-    opacity: 0;
     top: 30px;
     right: 35px;
     width: 50px;
@@ -169,20 +203,16 @@
             opacity: 1;
         }
     }
-    &>.bg {
-        height: 100%;
-        width: 100%;
+    &>.myImages {
         border-radius: 50%;
-        // background: url(images/music.jpg) no-repeat;
-        background-size: 100% 100%;
     }
-    &.play>.bg {
+    &.play>.myImages {
         animation: rotateIfte 10s linear infinite;
     }
     &>.pause {
         height: 100%;
         width: 100%;
-        z-index: 1;
+        z-index: 2;
         position: absolute;
         transition: opacity .5s ease;
         opacity: 0;
@@ -236,6 +266,23 @@
     height: 100%;
     background-color: #cbcad6;
     z-index: 999;
+    &.complete {
+        transition: background 1s ease;
+        background-color: transparent;
+        &>.angleBox {
+            animation: none !important;
+            &>.angle {
+                animation: none !important;
+            }
+            display: none;
+        }
+        &>.angleBox.one {
+            display: block;
+            &>.angle {
+                animation: loadWorld 1s ease forwards !important;
+            }
+        }
+    }
     .angleBox {
         height: 100px;
         width: 100px;
