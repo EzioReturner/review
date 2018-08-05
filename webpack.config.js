@@ -2,7 +2,6 @@ const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: path.resolve(__dirname, 'src/index.js'),
@@ -43,11 +42,18 @@ module.exports = {
             },
             {
                 test: /\.(scss|css)$/,
-                use: [
-                    {loader: 'style-loader'},
-                    {loader: 'css-loader?sourceMap'},
-                    {loader: 'postcss-loader'},
-                    {loader: 'sass-loader?sourceMap'},
+                use: [{
+                        loader: 'style-loader'
+                    },
+                    {
+                        loader: 'css-loader?sourceMap'
+                    },
+                    {
+                        loader: 'postcss-loader'
+                    },
+                    {
+                        loader: 'sass-loader?sourceMap'
+                    },
                 ]
             },
             {
