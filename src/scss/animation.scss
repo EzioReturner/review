@@ -46,11 +46,14 @@
     from {
         opacity: 1;
     }
+    10% {
+        background: #CA6040;
+    }
     40% {
         transform: scaleY(110);
     }
-    60% {
-        background-color: rgba(38, 36, 49, 0.8);
+    65% {
+        background: rgba(38, 36, 49, 0.6);
     }
     99% {
         opacity: 1;
