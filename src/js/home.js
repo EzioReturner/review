@@ -8,10 +8,11 @@ $(document).ready(function() {
     loadImg(images[0]);
     bindPageAction();
     const startTime = new Date();
+
     function loadImg(obj) {
-        if(index < images.length) {
-            const timer = setInterval(function () {
-                if(obj.complete) {
+        if (index < images.length) {
+            const timer = setInterval(function() {
+                if (obj.complete) {
                     clearInterval(timer);
                     loadImg(images[++index])
                 }
@@ -20,9 +21,9 @@ $(document).ready(function() {
             console.log('complete');
             const endTime = new Date();
             const minutesDiff = endTime.getMinutes() - startTime.getMinutes();
-            if(minutesDiff === 0){
+            if (minutesDiff === 0) {
                 const secDiff = endTime.getSeconds() - startTime.getSeconds();
-                if(secDiff < 4){
+                if (secDiff < 4) {
                     setTimeout(() => {
                         startMyPage();
                     }, 2000);
@@ -39,7 +40,8 @@ $(document).ready(function() {
 });
 
 
-let bgMusic='';
+let bgMusic = '';
+
 function startMyPage() {
     $('#fullpage').show();
     initFullPage();
@@ -48,8 +50,8 @@ function startMyPage() {
     bgMusic.setAttribute('loop', 'loop');
     bgMusic.setAttribute('autoplay', 'autoplay');
     document.body.appendChild(bgMusic);
-    $('#backImg').css('opacity',1);
-    $('#angleContainer').addClass('complete').bind('webkitAnimationEnd',function(){
+    $('#backImg').css('opacity', 1);
+    $('#angleContainer').addClass('complete').bind('webkitAnimationEnd', function() {
         $('#musicBox').css('opacity', 1).toggleClass('play');
         bgMusic.src = 'http://music.163.com/song/media/outer/url?id=472137696.mp3';
         $(this).remove();
@@ -70,9 +72,9 @@ function bindPageAction() {
         }
         $(this).toggleClass('play')
     });
-    $('#infoKey').bind('webkitAnimationEnd',function() {
-        $(this).unbind('webkitAnimationEnd');
+    $('#infoKey').bind('webkitAnimationEnd', function() {
         $.fn.fullpage.setAllowScrolling(true);
+        $(this).unbind('webkitAnimationEnd');
     });
 }
 
