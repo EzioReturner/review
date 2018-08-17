@@ -73,7 +73,7 @@ function bindPageAction() {
         $(this).toggleClass('play')
     });
     $('#infoKey').bind('webkitAnimationEnd', function() {
-        $.fn.fullpage.setAllowScrolling(true);
+        // $.fn.fullpage.setAllowScrolling(true);
         $(this).unbind('webkitAnimationEnd');
     });
 }
@@ -107,5 +107,5 @@ function initFullPage() {
             }
         }
     });
-    $.fn.fullpage.setAllowScrolling(false);
+    // $.fn.fullpage.setAllowScrolling(false);
 }
