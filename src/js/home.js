@@ -48,9 +48,9 @@ function startMyPage() {
     bgMusic.setAttribute('autoplay', 'autoplay');
     document.body.appendChild(bgMusic);
     $('#backImg').css('opacity', 1);
+    bgMusic.src = 'http://music.163.com/song/media/outer/url?id=472137696.mp3';
     $('#angleContainer').addClass('complete').bind('webkitAnimationEnd', function() {
         $('#musicBox').css('opacity', 1).toggleClass('play');
-        bgMusic.src = 'http://music.163.com/song/media/outer/url?id=472137696.mp3';
         $(this).remove();
     });
     $('#photoContainer').addClass('pageLoaded');
@@ -58,9 +58,9 @@ function startMyPage() {
 }
 
 function bindPageAction() {
-    $('#photoContainer').bind('webkitAnimationEnd', function() {
-        $(this).addClass('inPosition').unbind('webkitAnimationEnd');
-    });
+    // $('#photoContainer').bind('webkitAnimationEnd', function() {
+    //     $(this).addClass('inPosition').unbind('webkitAnimationEnd');
+    // });
     $('#musicBox').click(function() {
         if (bgMusic.paused) {
             bgMusic.play();
