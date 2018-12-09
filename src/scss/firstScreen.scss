@@ -183,7 +183,7 @@
         text-align: center;
         margin-top: 90px;
         font-weight: bold;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
     .detail {
@@ -201,7 +201,37 @@
     .projectContent {
         display: flex;
         flex-flow: row nowrap;
-        margin-top: 10px;
+        justify-content: space-around;
+        padding: 0 80px;
+
+        &>div {
+            flex: 0 0 45%;
+            min-height: 240px;
+            border: 1px solid rgba(188, 238, 251, 0.15);
+            box-shadow: 0px 0px 5px #CA6040;
+            border-radius: 10px;
+            position: relative;
+
+            &>img {
+                height: 60px;
+                width: 60px;
+                border: 2px solid #CA6040;
+                box-shadow: 0px 0px 5px #CA6040;
+                border-radius: 50%;
+                overflow: hidden;
+                position: absolute;
+                left: 50%;
+                margin-left: -30px;
+                top: -30px;
+            }
+
+            &>.name {
+                margin-top: 50px;
+                color: rgba($color: #e0e0e0, $alpha: 0.85);
+                font-size: 18px;
+                text-align: center;
+            }
+        }
     }
 }
 
