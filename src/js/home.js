@@ -53,6 +53,7 @@ function startMyPage() {
         $('#musicBox').css('opacity', 1).toggleClass('play');
         $(this).remove();
     });
+    // $('#musicBox').trigger('click');
     $('#photoContainer').addClass('pageLoaded');
     $('#profileInfo').addClass('pageLoaded')
 }
@@ -95,9 +96,9 @@ function initFullPage() {
                 $('#splitPoint').removeClass('start goThird').addClass('backOne');
             }
             if (nextIndex === 3) {
-                $('#thirdCenter').addClass('showPyramid');
+                // $('#thirdCenter').addClass('showPyramid');
             } else {
-                $('#thirdCenter').removeClass('showPyramid');
+                // $('#thirdCenter').removeClass('showPyramid');
             }
             if (index === 2 && nextIndex === 3) {
                 $('#splitPoint').removeClass('start backOne').addClass('goThird');
