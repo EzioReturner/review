@@ -25,7 +25,7 @@
         border-radius: 50%; // box-shadow: 0px 0px 13px #ed3a52;
         will-change: transform;
         overflow: hidden;
-        box-shadow: 0px 0px 48px #ed3a52;
+        // box-shadow: 0px 0px 48px #ed3a52;
 
         &.pageLoaded {
             animation: photoIn .5s ease .5s forwards;
@@ -230,6 +230,13 @@
                 color: rgba($color: #e0e0e0, $alpha: 0.85);
                 font-size: 18px;
                 text-align: center;
+                margin-bottom: 5px;
+            }
+            .detail {
+                color: rgba($color: #e0e0e0, $alpha: 0.85);
+                font-size: 16px;
+                padding: 0 20px;
+                display: inline-block;
             }
         }
     }
@@ -253,7 +260,7 @@
         text-shadow: 1px 2px #CA6040;
         font-size: 50px;
         text-align: center;
-        margin-top: 90px;
+        // margin-top: 90px;
         font-weight: bold;
         margin-bottom: 40px;
     }
