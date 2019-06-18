@@ -1,178 +1,149 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-    <meta
-        http-equiv="X-UA-Compatible"
-        content="ie=edge"
-    >
-    <title>Ezio</title>
-    <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ezio</title>
+  <meta charset="utf-8">
 </head>
 
 <body>
-    <div class="lineContainer">
-        <span id="splitPoint"></span>
+  <div style="opacity:0;" id="musicBox">
+    <div class="pause"></div>
+    <img src="../images/music.jpg" class="myImages">
+  </div>
+  <div id="angleContainer">
+    <div class="angleBox one">
+      <div class="angle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
-    <div
-        style="opacity:0;"
-        id="musicBox"
-    >
-        <div class="pause"></div>
-        <img
-            src="../images/music.jpg"
-            class="myImages"
-        >
+    <div class="angleBox two">
+      <div class="angle two">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
-    <div id="angleContainer">
-        <div class="angleBox one">
-            <div class="angle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-        <div class="angleBox two">
-            <div class="angle two">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-        <div class="angleBox three">
-            <div class="angle three">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-        <div class="angleBox four">
-            <div class="angle four"></div>
-        </div>
+    <div class="angleBox three">
+      <div class="angle three">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
-    <div class="backCover"></div>
-    <img
-        style="opacity:0;min-width:600px;"
-        src="../images/background.png"
-        id="backImg"
-        class="myImages"
-    >
-    <article
-        class="content"
-        id="fullpage"
-        style="display:none;"
-    >
-        <section class="section sectionOne">
-            <div id="photoContainer">
-                <img
-                    src="../images/profilePhoto.jpg"
-                    id="profilePhoto"
-                    class="myImages profilePhoto"
-                >
-            </div>
-            <div id="profileInfo">
-                <span
-                    class="profileName"
-                    style="opacity: 0;"
-                >Hi~我是Ezio</span>
-                <!-- <span class="profileName" style="opacity: 0;">用最优雅的方式描绘每一个像素</span> -->
-                <span class="splitLine">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </span>
-                <!-- <span class="profileName" style="opacity: 0;">我叫王哲威</span> -->
-                <span
-                    class="profileName"
-                    style="opacity: 0;"
-                    id="infoKey"
-                >一名前端开发工程师</span>
-            </div>
-        </section>
-        <section class="section">
-            <div class="workInfo">
-                <div class="title">目前供职<span class="important">美图</span></div>
-                <div class="detail">从事<span class="important">美图云</span>相关项目</div>
-                <div
-                    class="detail"
-                    style="margin-top:20px;margin-bottom: 30px;"
-                >参与主要项目：</div>
-                <div class="projectContent">
-                    <div class="left">
-                        <img src="../images/circle.png">
-                        <p class="name">Matrix</p>
-                        <span class="detail">
-                            美图云旗下，一站式DOCKER容器化部署管理平台
-                        </span>
-                    </div>
-                    <div class="right">
-                        <img src="../images/circle.png">
-                        <p class="name">Mtue / Mtue-pro</p>
-                        <span class="detail">
-                            美图内部前端中后台解决方案
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section">
-            <div class="mySkill">
-                <!-- <div class="thirdCenter" id="thirdCenter"> -->
-                <div class="title">擅长技术</div>
-                <div class="skill1">
-                    <span class="high">CSS</span>
-                    <span class="middle">SCSS</span>
-                </div>
-                <div class="skill2">
-                    <span class="high">JavaScript</span>
-                    <span class="high">JQuery</span>
-                    <span class="high">Bootstrap</span>
-                    <span class="low">three.js</span>
-                </div>
-                <div class="skill3">
-                    <span class="high">GISApi</span>
-                    <span class="middle">HTML5</span>
-                    <span class="middle">Canvas</span>
-                </div>
-                <div class="skill4">
-                    <span class="middle">nodeJS</span>
-                    <span class="low">webpack</span>
-                </div>
-            </div>
-            <!-- </div> -->
-        </section>
-    </article>
+    <div class="angleBox four">
+      <div class="angle four"></div>
+    </div>
+  </div>
+  <div class="backCover"></div>
+  <img style="opacity:0;min-width:600px;" src="../images/background.png" id="backImg" class="myImages">
+  <article class="content" id="fullpage" style="display:none;">
+    <section class="section sectionOne">
+      <div id="photoContainer">
+        <img src="../images/profilePhoto.jpg" id="profilePhoto" class="myImages profilePhoto">
+      </div>
+      <div id="profileInfo">
+        <span class="profileName" style="opacity: 0;">Hi~我是Ezio</span>
+        <!-- <span class="profileName" style="opacity: 0;">用最优雅的方式描绘每一个像素</span> -->
+        <span class="splitLine">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        <!-- <span class="profileName" style="opacity: 0;">我叫王哲威</span> -->
+        <span class="profileName" style="opacity: 0;" id="infoKey">一名前端开发工程师</span>
+      </div>
+    </section>
+    <section class="section">
+      <div class="workInfo">
+        <div class="title">
+          <span>目前供职</span>
+          <span class="important">luckin coffee</span>
+          <img class="logo" src="../images/logo.png" alt="">
+        </div>
+      </div>
+      <!-- <div class="detail">从事<span class="important">美图云</span>相关项目</div>
+        <div class="detail" style="margin-top:20px;margin-bottom: 30px;">参与主要项目：</div>
+        <div class="projectContent">
+          <div class="left">
+            <img src="../images/circle.png">
+            <p class="name">Matrix</p>
+            <span class="detail">
+              美图云旗下，一站式DOCKER容器化部署管理平台
+            </span>
+          </div>
+          <div class="right">
+            <img src="../images/circle.png">
+            <p class="name">Mtue / Mtue-pro</p>
+            <span class="detail">
+              美图内部前端中后台解决方案
+            </span>
+          </div>
+        </div> -->
+      </div>
+    </section>
+    <section class="section">
+      <div class="mySkill">
+        <!-- <div class="thirdCenter" id="thirdCenter"> -->
+        <div class="title">擅长技术</div>
+        <div>
+          <span class="high">Vue</span>
+          <span class="middle">Angular</span>
+          <span class="middle">React</span>
+        </div>
+        <div>
+          <span class="high">JavaScript</span>
+          <span class="high">JQuery</span>
+          <span class="high">Bootstrap</span>
+        </div>
+        <div>
+          <span class="high">GISApi</span>
+          <span class="middle">HTML5</span>
+          <span class="middle">Canvas</span>
+        </div>
+        <div>
+          <span class="middle">nodeJS</span>
+          <span class="middle">webpack</span>
+        </div>
+        <div>
+          <span class="high">CSS</span>
+          <span class="high">SCSS</span>
+        </div>
+      </div>
+      <!-- </div> -->
+    </section>
+  </article>
 
 </body>
 <script>
-    (function(win, doc) {
-        var UA = navigator.userAgent,
-            isAndroid = /android|adr/gi.test(UA),
-            isIos = /iphone|ipod|ipad/gi.test(UA) && !isAndroid;
-        var docEl = doc.documentElement;
-        var refreshRem = function() {
-                var w = docEl.getBoundingClientRect().width || 320;
-                var fs = w / 320 * 20;
-                fs = fs > 40 ? 40 : fs;
-                docEl.style.fontSize = fs + 'px';
-            },
-            refreshRemId;
-        win.addEventListener('resize', function() {
-            clearTimeout(refreshRemId);
-            refreshRemId = setTimeout(refreshRem, 100);
-        }, false);
-        win.addEventListener('pageshow', function(e) {
-            if (e.persisted) {
-                clearTimeout(refreshRemId);
-                refreshRemId = setTimeout(refreshRem, 100);
-            }
-        }, false);
-        refreshRem();
-    })(window, document);
+  (function (win, doc) {
+    var UA = navigator.userAgent,
+      isAndroid = /android|adr/gi.test(UA),
+      isIos = /iphone|ipod|ipad/gi.test(UA) && !isAndroid;
+    var docEl = doc.documentElement;
+    var refreshRem = function () {
+        var w = docEl.getBoundingClientRect().width || 320;
+        var fs = w / 320 * 20;
+        fs = fs > 40 ? 40 : fs;
+        docEl.style.fontSize = fs + 'px';
+      },
+      refreshRemId;
+    win.addEventListener('resize', function () {
+      clearTimeout(refreshRemId);
+      refreshRemId = setTimeout(refreshRem, 100);
+    }, false);
+    win.addEventListener('pageshow', function (e) {
+      if (e.persisted) {
+        clearTimeout(refreshRemId);
+        refreshRemId = setTimeout(refreshRem, 100);
+      }
+    }, false);
+    refreshRem();
+  })(window, document);
 </script>
 
 </html>
